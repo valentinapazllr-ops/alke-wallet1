@@ -27,49 +27,33 @@
       </div>
 
       <div class="card-body p-4">
-        <!-- Lista mejorada con datos reales -->
+        <!-- Lista: solo transferencias (realizadas y recibidas) con fechas -->
         <ul id="listaMovimientos" class="list-group list-group-flush mb-4">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
             <div>
-              <i class="bi bi-cart text-warning me-2"></i>
-              Compra en línea
+              <i class="bi bi-arrow-right-circle text-danger me-2"></i>
+              Transferencia realizada
+              <small class="text-muted d-block">A: Cuenta ****1234 — 05/01/2026</small>
             </div>
-            <span class="badge bg-success rounded-pill">$50.00</span>
+            <span class="badge bg-danger rounded-pill">$120.00</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+
+          <li class="list-group-item d-flex justify-content-between align-items-start">
             <div>
-              <i class="bi bi-arrow-up-circle text-success me-2"></i>
-              Depósito
-            </div>
-            <span class="badge bg-success rounded-pill">$100.00</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div>
-              <i class="bi bi-arrow-right-circle text-info me-2"></i>
+              <i class="bi bi-arrow-left-circle text-success me-2"></i>
               Transferencia recibida
+              <small class="text-muted d-block">De: Cuenta ****5678 — 02/01/2026</small>
             </div>
-            <span class="badge bg-success rounded-pill">$75.00</span>
+            <span class="badge bg-success rounded-pill">$350.00</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
+
+          <li class="list-group-item d-flex justify-content-between align-items-start">
             <div>
-              <i class="bi bi-cart text-warning me-2"></i>
-              Compra en línea
+              <i class="bi bi-arrow-right-circle text-danger me-2"></i>
+              Transferencia realizada
+              <small class="text-muted d-block">A: Cuenta ****9012 — 28/12/2025</small>
             </div>
-            <span class="badge bg-danger rounded-pill">$5,550.00</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div>
-              <i class="bi bi-arrow-up-circle text-success me-2"></i>
-              Depósito misma cuenta
-            </div>
-            <span class="badge bg-success rounded-pill">$10,500.00</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div>
-              <i class="bi bi-arrow-right-circle text-info me-2"></i>
-              Transferencia recibida
-            </div>
-            <span class="badge bg-success rounded-pill">$7,575.00</span>
+            <span class="badge bg-danger rounded-pill">$75.00</span>
           </li>
         </ul>
 
