@@ -4,32 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña</title>
+    <title>Wallet - Recuperar Contraseña</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/stylerecuperarcontraseña.css">
 </head>
 
-<body>
-    <div class="recovery-container">
-        <h2>Recuperar Contraseña</h2>
-        <p class="description">
-            Ingresa tu email para recibir un enlace de recuperación.
-        </p>
+<body class="bg-light">
 
-        <form id="recoveryForm">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="tu@email.com" autocomplete="email">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+        <div class="card shadow-lg w-100 recovery-card">
+
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    <div class="icon-circle bg-warning bg-opacity-10 text-warning mx-auto mb-3">
+                        <i class="bi bi-shield-lock display-4"></i>
+                    </div>
+                    <h2 class="fw-bold mb-2">Recuperar Contraseña</h2>
+                    <p class="text-muted">Ingresa tu correo electrónico y te enviaremos las instrucciones para
+                        restablecer tu cuenta.</p>
+                </div>
+
+                <form id="recoveryForm">
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-bold small text-uppercase text-secondary">Correo
+                            Electrónico</label>
+                        <div class="input-group input-group-lg border rounded-3 overflow-hidden">
+                            <span class="input-group-text bg-white border-0"><i
+                                    class="bi bi-envelope text-muted"></i></span>
+                            <input type="email" class="form-control border-0 bg-white" id="email"
+                                placeholder="ejemplo@correo.com" required autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-3">
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold hover-scale shadow-sm">
+                            <i class="bi bi-send me-2"></i>Enviar Instrucciones
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-4 text-center">
+                    <a href="index.html"
+                        class="text-decoration-none text-secondary d-inline-flex align-items-center fw-bold hover-link">
+                        <i class="bi bi-arrow-left me-2"></i>Volver al Inicio de Sesión
+                    </a>
+                </div>
             </div>
 
-            <button type="submit" id="btnSubmit">Enviar Enlace de Recuperación</button>
-        </form>
+            <!-- Barra de progreso simulada (opcional) -->
+            <div class="progress" style="height: 4px; display: none;" id="progressBar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    style="width: 100%"></div>
+            </div>
 
-        <div class="footer-links">
-            <a href="index.html">← Volver al Login</a>
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/recuperacióncontraseña.js"></script>
 </body>
 

@@ -1,95 +1,63 @@
-/* Importar una fuente moderna */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* assets/css/stylerecuperarcontraseña.css */
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f4f7f6; /* Color gris suave para la Wallet */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.recovery-container {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-h2 {
-    color: #0d6efd; /* Azul institucional */
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.description {
-    color: #6c757d;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-}
-
-.form-group {
-    text-align: left;
-    margin-bottom: 1.5rem;
-}
-
-label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #495057;
-}
-
-input[type="email"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    font-size: 1rem;
-    box-sizing: border-box; /* Evita que el input se salga del contenedor */
-    transition: border-color 0.3s ease;
-}
-
-input[type="email"]:focus {
-    outline: none;
-    border-color: #0d6efd;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #0d6efd;
-    color: white;
+.recovery-card {
+    max-width: 500px;
+    border-radius: 20px;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
 }
 
-button:hover {
-    background-color: #0b5ed7;
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-links {
-    margin-top: 1.5rem;
+/* Input Styles */
+.form-control:focus {
+    box-shadow: none;
+    background-color: #fff !important;
 }
 
-.footer-links a {
-    color: #6c757d;
-    text-decoration: none;
-    font-size: 0.85rem;
+.input-group:focus-within {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.hover-scale {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+.hover-link:hover {
+    color: #0d6efd !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-body {
+    animation: fadeIn 0.5s ease-out;
 }

@@ -1,45 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const recoveryForm = document.getElementById('recoveryForm');
-    const emailInput = document.getElementById('email');
-    const btnSubmit = document.getElementById('btnSubmit');
+// assets/js/recuperacióncontraseña.js
 
-    recoveryForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita que la página se recargue
+$(document).ready(function () {
+    $('#recoveryForm').on('submit', function (e) {
+        e.preventDefault();
 
-        const email = emailInput.value.trim();
+        const email = $('#email').val().trim();
+        const btn = $(this).find('button[type="submit"]');
 
-        // Validación básica
-        if (email === "") {
-            alert("Por favor, ingresa tu correo electrónico.");
+        // Regex para validación de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!email) {
+            alert("⚠️ Por favor ingresa tu correo electrónico.");
             return;
         }
 
-        // Simulación de envío
-        btnSubmit.disabled = true;
-        btnSubmit.innerText = "Enviando...";
+        if (!emailRegex.test(email)) {
+            alert("⚠️ Por favor ingresa un correo electrónico válido.");
+            return;
+        }
+
+        // Simular envío
+        btn.prop('disabled', true).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Enviando...');
+        $('#progressBar').show();
 
         setTimeout(() => {
-            // Cambiar el contenido para dar feedback al usuario
-            const container = document.querySelector('.recovery-container');
-            container.innerHTML = `
-                <div style="padding: 20px;">
-                    <h2 style="color: #198754;">¡Correo Enviado!</h2>
-                    <p class="description">
-                        Hemos enviado un enlace a <strong>${email}</strong>. 
-                        Revisa tu bandeja de entrada o carpeta de spam.
-                    </p>
-                    <a href="index.html" class="btn" style="
-                        display: inline-block;
-                        margin-top: 10px;
-                        padding: 10px 20px;
-                        background-color: #0d6efd;
-                        color: white;
-                        text-decoration: none;
-                        border-radius: 8px;
-                        font-weight: 600;
-                    ">Volver al Login</a>
-                </div>
-            `;
-        }, 1500); // Simulamos una espera de 1.5 segundos
+            $('#progressBar').hide();
+
+            // Éxito simulado
+            alert(`✅ ¡Listo! Hemos enviado un enlace de recuperación a: ${email}\n\nRevisa tu bandeja de entrada.`);
+
+            // Resetear estado
+            btn.prop('disabled', false).html('<i class="bi bi-send me-2"></i>Enviar Instrucciones');
+            $('#email').val(''); // Limpiar campo
+
+        }, 2000);
     });
 });
