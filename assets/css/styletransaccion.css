@@ -1,0 +1,62 @@
+/* Estilos generales */
+body {
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Styling */
+.card-movimientos {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+/* Transaction List Items */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Typography */
+.text-description {
+    font-weight: 500;
+    color: #333;
+}
+
+.text-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Amount Styling */
+.monto-positivo {
+    color: #198754; /* Bootstrap Success */
+    font-weight: 700;
+}
+
+.monto-negativo {
+    color: #dc3545; /* Bootstrap Danger */
+    font-weight: 700;
+}
+
+/* Button Styling */
+.btn-outline-primary {
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}

@@ -1,0 +1,71 @@
+/* assets/css/styleindex.css */
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    max-width: 1000px;
+    min-height: 600px;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(13, 110, 253, 0.3), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    background-color: #fff !important;
+}
+
+.input-group:focus-within {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    background-color: #fff !important;
+}
+
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+    background-color: #fff !important;
+}
+
+.hover-scale {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.hover-light {
+    transition: background-color 0.2s ease;
+}
+
+.hover-light:hover {
+    background-color: #f8f9fa;
+}

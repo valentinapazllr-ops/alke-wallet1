@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Enviar Dinero</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/stylesendmoney.css">
+</head>
+
+<body class="bg-light">
+
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card shadow-lg w-100 send-card">
+
+      <div class="card-header bg-primary text-white text-center py-4 border-0">
+        <div class="icon-circle bg-white bg-opacity-25 mx-auto mb-3">
+          <i class="bi bi-send-fill display-4"></i>
+        </div>
+        <h2 class="fw-bold mb-0">Enviar Dinero</h2>
+        <p class="small opacity-75">Transfiere a tus contactos al instante</p>
+      </div>
+
+      <div class="card-body p-4">
+
+        <!-- Sección de Contactos -->
+        <div class="mb-4">
+          <label class="form-label fw-bold text-secondary">Buscar Contacto</label>
+          <div class="input-group mb-2">
+            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+            <input type="text" class="form-control border-start-0 ps-0" id="searchContact"
+              placeholder="Nombre, alias o banco">
+          </div>
+
+          <button type="button" class="btn btn-outline-primary btn-sm w-100 mb-3" data-bs-toggle="modal"
+            data-bs-target="#modalContacto">
+            <i class="bi bi-person-plus-fill me-1"></i> Agregar nuevo contacto
+          </button>
+
+          <div class="contacts-wrapper border rounded bg-white p-2" style="max-height: 200px; overflow-y: auto;">
+            <ul id="contactList" class="list-group list-group-flush">
+              <li class="list-group-item contact-item" data-name="John Doe">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="avatar me-3 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">JD</div>
+                  <div>
+                    <h6 class="mb-0 name">John Doe</h6>
+                    <small class="text-muted d-block">Banco: ABC Bank</small>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item contact-item" data-name="Jane Smith">
+                <div class="d-flex align-items-center">
+                  <div
+                    class="avatar me-3 bg-info text-white rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 40px; height: 40px;">JS</div>
+                  <div>
+                    <h6 class="mb-0 name">Jane Smith</h6>
+                    <small class="text-muted d-block">Banco: XYZ Bank</small>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Formulario de Envío -->
+        <div class="mb-4">
+          <label class="form-label fw-bold text-secondary">Monto a Enviar</label>
+          <div class="input-group input-group-lg">
+            <span class="input-group-text bg-light border-end-0 text-primary fw-bold">$</span>
+            <input type="number" id="montoEnviar" class="form-control border-start-0 ps-0 fw-bold text-primary fs-4"
+              placeholder="0" min="1">
+          </div>
+          <div class="form-text text-end">Saldo disponible: <span id="saldoDisponible"
+              class="fw-bold text-dark">...</span></div>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button id="btnEnviarDinero" class="btn btn-primary btn-lg rounded-pill shadow-sm hover-scale">
+            Confirmar Transferencia
+          </button>
+          <a href="menu.html" class="btn btn-outline-secondary rounded-pill">
+            <i class="bi bi-arrow-left me-2"></i>Volver al Menú
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Nuevo Contacto -->
+  <div class="modal fade" id="modalContacto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title fw-bold">Nuevo Contacto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formNuevoContacto">
+            <div class="mb-3">
+              <label class="form-label small text-muted">Nombre Completo</label>
+              <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col">
+                <label class="form-label small text-muted">CBU / CVU</label>
+                <input type="text" id="cbu" class="form-control" required>
+              </div>
+              <div class="col">
+                <label class="form-label small text-muted">Alias</label>
+                <input type="text" id="alias" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small text-muted">Banco</label>
+              <input type="text" id="banco" class="form-control" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary rounded-pill">Guardar Contacto</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/sendmoney.js"></script>
+</body>
+
+</html>

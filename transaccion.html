@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Últimos Movimientos</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styletransaccion.css">
+</head>
+
+<body class="bg-light">
+  <div class="container d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card shadow-lg w-100" style="max-width: 500px; border-radius: 20px;">
+
+      <!-- Header mejorado -->
+      <div class="card-header bg-primary text-white text-center py-4"
+        style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+        <h2 class="mb-0 fw-bold">
+          <i class="bi bi-list-ul me-2"></i>
+          Últimos Movimientos
+        </h2>
+      </div>
+
+      <div class="card-body p-4">
+        <!-- Lista mejorada con datos reales -->
+        <ul id="listaMovimientos" class="list-group list-group-flush mb-4">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-cart text-warning me-2"></i>
+              Compra en línea
+            </div>
+            <span class="badge bg-success rounded-pill">$50.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-arrow-up-circle text-success me-2"></i>
+              Depósito
+            </div>
+            <span class="badge bg-success rounded-pill">$100.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-arrow-right-circle text-info me-2"></i>
+              Transferencia recibida
+            </div>
+            <span class="badge bg-success rounded-pill">$75.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-cart text-warning me-2"></i>
+              Compra en línea
+            </div>
+            <span class="badge bg-danger rounded-pill">$5,550.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-arrow-up-circle text-success me-2"></i>
+              Depósito misma cuenta
+            </div>
+            <span class="badge bg-success rounded-pill">$10,500.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="bi bi-arrow-right-circle text-info me-2"></i>
+              Transferencia recibida
+            </div>
+            <span class="badge bg-success rounded-pill">$7,575.00</span>
+          </li>
+        </ul>
+
+        <div class="d-grid gap-2">
+          <a href="menu.html" class="btn btn-outline-primary btn-lg rounded-pill">
+            <i class="bi bi-arrow-left me-2"></i>
+            Volver al Menú
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Logic -->
+  <script src="assets/js/transaccion.js"></script>
+</body>
+
+</html>

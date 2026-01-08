@@ -1,0 +1,71 @@
+/* assets/css/stylemenu.css */
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-card {
+    max-width: 480px;
+    border-radius: 24px;
+    border: none;
+    overflow: hidden;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* El gradiente viene de la clase bg-gradient de bootstrap pero podemos reforzarlo */
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.btn-outline-primary {
+    border: 2px solid #dee2e6;
+    color: #495057;
+    background: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    border-color: #0d6efd;
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-danger {
+    transition: color 0.2s ease;
+}
+
+.hover-danger:hover {
+    color: #dc3545 !important;
+}
+
+/* Overlay Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}

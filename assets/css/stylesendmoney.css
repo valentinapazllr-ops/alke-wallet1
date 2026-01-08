@@ -1,0 +1,79 @@
+/* assets/css/stylesendmoney.css */
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.send-card {
+    max-width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contact List Styling */
+.contact-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.contact-item:hover {
+    background-color: #f8f9fa;
+}
+
+.contact-item.active {
+    background-color: #e7f1ff;
+    border-color: #0d6efd;
+    color: #0c4128;
+}
+
+.contacts-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contacts-wrapper::-webkit-scrollbar-thumb {
+    background-color: #dee2e6;
+    border-radius: 10px;
+}
+
+/* Input Styling */
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-radius: 0.375rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: translateY(-2px);
+}
